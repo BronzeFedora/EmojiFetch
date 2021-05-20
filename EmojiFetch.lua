@@ -135,7 +135,7 @@ local EmojiFetch = {}
 
 function EmojiFetch.getEmoji(Name)
 	for i, emojiInfo in pairs(emojis) do
-		if emojiInfo.Name == Name then
+		if emojiInfo.Name:lower() == Name:lower() then
 			return emojiInfo
 		end
 	end
